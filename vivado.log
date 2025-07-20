@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu May 15 23:07:37 2025
+# Process ID         : 32648
+# Current directory  : C:/Users/ASUS/Downloads/final_01
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent30268 C:\Users\ASUS\Downloads\final_01\final_01.xpr
+# Log file           : C:/Users/ASUS/Downloads/final_01/vivado.log
+# Journal file       : C:/Users/ASUS/Downloads/final_01\vivado.jou
+# Running On         : LAPTOP-PF414VQS
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 7 6800HS with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16388 MB
+# Swap memory        : 16388 MB
+# Total Virtual      : 32776 MB
+# Available Virtual  : 9822 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ASUS/Downloads/final_01/final_01.xpr
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2024.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2024.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1334.199 ; gain = 222.328
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu May 15 23:19:36 2025...

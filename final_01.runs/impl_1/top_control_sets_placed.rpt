@@ -1,0 +1,154 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Thu May 15 14:17:04 2025
+| Host         : LAPTOP-PF414VQS running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    76 |
+|    Minimum number of control sets                        |    76 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   100 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    76 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     7 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     2 |
+| >= 16              |    53 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               5 |            4 |
+| No           | No                    | Yes                    |              12 |            6 |
+| No           | Yes                   | No                     |              12 |            5 |
+| Yes          | No                    | No                     |              79 |           33 |
+| Yes          | No                    | Yes                    |              10 |            4 |
+| Yes          | Yes                   | No                     |             158 |           51 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------+-----------------------------------------------+--------------------------------------+------------------+----------------+--------------+
+|        Clock Signal        |                 Enable Signal                 |           Set/Reset Signal           | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------+-----------------------------------------------+--------------------------------------+------------------+----------------+--------------+
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/byte_counter[8]_i_1_n_0               | sd_ctrl/byte_counter[4]_i_1_n_0      |                1 |              1 |         1.00 |
+|  u_clk_wiz_0/inst/clk_out1 | btn_debouncer/btn_state_i_1_n_0               | sd_ctrl/rst                          |                1 |              1 |         1.00 |
+|  u_clk_wiz_0/inst/clk_out1 | btnd_debouncer/btn_state_i_1__0_n_0           | sd_ctrl/rst                          |                1 |              1 |         1.00 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/cs3_out                               |                                      |                1 |              1 |         1.00 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/bit_counter[7]_i_1_n_0                | sd_ctrl/bit_counter[9]_i_1_n_0       |                1 |              4 |         4.00 |
+|  u_clk_wiz_0/inst/clk_out1 |                                               |                                      |                4 |              5 |         1.25 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/cmd_out[45]_i_1_n_0                   | sd_ctrl/cmd_out[16]_i_1_n_0          |                2 |              5 |         2.50 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/cmd_out[45]_i_1_n_0                   | sd_ctrl/cmd_out[17]_i_1_n_0          |                3 |              5 |         1.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/return_state[4]_i_1_n_0               |                                      |                2 |              5 |         2.50 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/state[4]_i_1_n_0                      | sd_ctrl/rst                          |                2 |              5 |         2.50 |
+|  u_clk_wiz_0/inst/clk_out1 | change_sector_group                           | sd_ctrl/rst                          |                3 |              5 |         1.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/bit_counter[7]_i_1_n_0                |                                      |                3 |              6 |         2.00 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/FSM_sequential_main_state_reg[1]_1[0] | sd_ctrl/SR[0]                        |                2 |              7 |         3.50 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/dout[7]_i_1_n_0                       |                                      |                4 |              8 |         2.00 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/byte_counter[8]_i_1_n_0               |                                      |                2 |              8 |         4.00 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/recv_data[7]_i_1_n_0                  |                                      |                4 |              8 |         2.00 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/E[0]                                  |                                      |                5 |              8 |         1.60 |
+|  u_clk_wiz_0/inst/clk_out1 | vga_sync_unit/v_count_reg0                    | sd_ctrl/rst                          |                4 |             10 |         2.50 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/cmd_out[45]_i_1_n_0                   | sd_ctrl/cmd_out[55]_i_1_n_0          |                3 |             10 |         3.33 |
+|  u_clk_wiz_0/inst/clk_out1 | current_sector[9]_i_1_n_0                     | sd_ctrl/rst                          |                4 |             10 |         2.50 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/FSM_sequential_main_state_reg[0]_0[0] | sd_ctrl/rst                          |                3 |             11 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write                     | sd_ctrl/SR[0]                        |                4 |             15 |         3.75 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/change_sector_group_reg_0[0]          | sd_ctrl/rst                          |                4 |             15 |         3.75 |
+|  u_clk_wiz_0/inst/clk_out1 | btn_debouncer/counter[0]_i_2_n_0              | btn_debouncer/counter[0]_i_1_n_0     |                5 |             18 |         3.60 |
+|  u_clk_wiz_0/inst/clk_out1 | btnd_debouncer/counter[0]_i_2__0_n_0          | btnd_debouncer/counter[0]_i_1__0_n_0 |                5 |             18 |         3.60 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[11]_2           |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[7]_3            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[11]_0           |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[7]_4            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[6]_1            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[11]_1           |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[7]_5            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[10]_6           |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[6]_0            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[10]_2           |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[6]_2            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[10]_1           |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[6]_6            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[11]_4           |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[8]              |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[7]_6            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[11]             |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[6]              |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[7]              |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[8]_0            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[10]_7           |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[8]_1            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[8]_2            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[9]_4            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[8]_4            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[8]_5            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[9]_3            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[9]_2            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[8]_3            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[9]_1            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[8]_6            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[9]_5            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[9]              |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[9]_0            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[11]_5           |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[6]_5            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[6]_4            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[10]_0           |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[7]_0            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[6]_3            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[6]_7            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[11]_3           |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[10]_5           |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[10]_4           |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[7]_1            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[7]_2            |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[10]             |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/buffer_addr_write_reg[10]_3           |                                      |                6 |             22 |         3.67 |
+|  u_clk_wiz_0/inst/clk_out1 |                                               | sd_ctrl/rst                          |               11 |             24 |         2.18 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/boot_counter[0]_i_1_n_0               | sd_ctrl/rst                          |                7 |             27 |         3.86 |
+|  u_clk_wiz_0/inst/clk_out1 | sd_ctrl/cmd_out[45]_i_1_n_0                   |                                      |               12 |             35 |         2.92 |
++----------------------------+-----------------------------------------------+--------------------------------------+------------------+----------------+--------------+
+
+
